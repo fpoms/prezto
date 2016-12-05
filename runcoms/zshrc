@@ -11,3 +11,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+export PATH="$HOME/.npm-packages/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/Cellar/node/7.2.0/bin:$PATH"
+
+# Setup Emacs daemon and ec alias to connect to it
+alias ec='emacsclient -nw'
