@@ -19,4 +19,10 @@ export PYTHONPATH="/opt/opencv-3.1.0/lib/python2.7/site-packages:$PYTHONPATH"
 
 # Setup Emacs daemon and ec alias to connect to it
 alias ec='emacsclient -nw'
+# Start Emacs daemon on first ec usage
+export ALTERNATE_EDITOR=''
 alias tmux="TERM=screen-256color-bce tmux"
+
+# Keep ssh key accessed
+eval `keychain --eval id_rsa`
+
