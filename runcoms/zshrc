@@ -26,3 +26,13 @@ alias tmux="TERM=screen-256color-bce tmux"
 # Keep ssh key accessed
 eval `keychain --eval id_rsa`
 
+case $HOST in
+    ocean)
+        export http_proxy=http://proxy.pdl.cmu.edu:3128/
+        export https_proxy=$http_proxy
+        ;;
+    crissy)
+        export http_proxy=http://proxy.pdl.cmu.edu:3128/
+        export https_proxy=$http_proxy
+        ;;
+esac
