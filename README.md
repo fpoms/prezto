@@ -80,6 +80,8 @@ Resources
 
 The [Zsh Reference Card][7] and the [zsh-lovers][8] man page are indispensable.
 
+Test
+
 License
 -------
 
