@@ -15,7 +15,14 @@ fi
 export PATH="$HOME/.npm-packages/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/Cellar/node/7.2.0/bin:$PATH"
-export PYTHONPATH="/opt/opencv-3.1.0/lib/python2.7/site-packages:$PYTHONPATH"
+export PATH="/opt/ffmpeg-3.2.2/bin:$PATH"
+export PYTHONPATH="/opt/opencv-3.2.0/lib/python2.7/dist-packages:$PYTHONPATH"
+export PYTHONPATH="/h/apoms/repos/scanner/python:$PYTHONPATH"
+export LD_LIBRARY_PATH=/opt/opencv-3.2.0/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/opt/ffmpeg-3.2.2/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/opt/caffe/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/opt/halide.autoscheduler/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 
 # Setup Emacs daemon and ec alias to connect to it
 alias ec='emacsclient -nw'
@@ -30,9 +37,21 @@ case $HOST in
     ocean)
         export http_proxy=http://proxy.pdl.cmu.edu:3128/
         export https_proxy=$http_proxy
+	export no_proxy="127.0.0.1, localhost"
         ;;
     crissy)
         export http_proxy=http://proxy.pdl.cmu.edu:3128/
         export https_proxy=$http_proxy
+	export no_proxy="127.0.0.1, localhost"
+        ;;
+    pismo)
+        export http_proxy=http://proxy.pdl.cmu.edu:3128/
+        export https_proxy=$http_proxy
+	export no_proxy="127.0.0.1, localhost"
+        ;;
+    stinson)
+        export http_proxy=http://proxy.pdl.cmu.edu:3128/
+        export https_proxy=$http_proxy
+	export no_proxy="127.0.0.1, localhost"
         ;;
 esac
