@@ -5,6 +5,13 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+export PATH="$HOME/.npm-packages/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/Cellar/node/7.2.0/bin:$PATH"
+#export PATH="/Users/fpoms/anaconda3/bin:$PATH"
+export PATH="/Users/fpoms/repos/misc/scripts:$PATH"
+export DYLD_LIBRARY_PATH="/Users/fpoms/repos/scanner/thirdparty/install/lib:$DYLD_LIBRARY_PATH"
+
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
